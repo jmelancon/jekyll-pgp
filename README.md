@@ -2,6 +2,8 @@
 
 A utilitarian theme designed to be customizable and responsive.
 
+TODO: Update to reflect project properly.
+
 ### Features:
 - Tastefully designed mobile and desktop layouts
   - Sidebar-oriented desktop navigation with fairly liberal spacing

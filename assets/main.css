@@ -1,62 +1,7 @@
 ---
 layout: none
 ---
-/* define menu first because cascade is weird */
-.hamburger_div {
-    width: 100%;
-    height: 6em;
-    background-color: {{ site.colors.secondary }};
-    display: block;
-}
 
-#menutoggle{
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    background-color: {{ site.colors.secondary }};
-    color: {{ site.colors.text }};
-    display: flex;
-    font-size: 20px;
-    position: relative;
-    z-index: 5;
-}
-#cb:checked + #topmenu_div {
-    transform: translate(0%,0%);
-}
-.topmenu_content{
-    width:100%;
-    font-family: monospace;
-    background-color: {{ site.colors.secondary }};
-    color: {{ site.colors.text }};
-    margin: 0;
-    display: inline-block;
-    transform: translate(0,calc(-100% - 6em));
-    z-index: 4;
-    position: absolute;
-    padding-bottom: 1rem;
-}
-
-/* menu arrangement*/
-#topmenu_div > ul{
-    text-align: center;
-    list-style-position: inside;
-    list-style-type: none;
-    padding-left: 0rem;
-    padding-right: 0rem;
-}
-
-/* menu animation */
-.slider{
-    -webkit-transition: all .5 ease;
-    -moz-transition: all .5s ease;
-    -o-transition: all .5s ease;
-    -ms-transition: all .5s ease;
-    transition: transform .5s ease;
-}
-.slider-active{
-    transform: translate(0%,0%);
-}
 #spacer{
     width:100%;
     height:6em;
@@ -71,12 +16,14 @@ layout: none
     z-index: 5;
     position: relative;
 }
+
 .header_div{
     padding: 8px;
     align: center;
     z-index: 5;
     position: relative;
 }
+
 .header_div div{
     display: inline-block;
     vertical-align: middle;
@@ -85,7 +32,7 @@ layout: none
 }
 
 /* define basic theme */
-body, #markdown_content {
+body, #nonheaderfooter {
     font-family: monospace;
     background-color: {{ site.colors.primary }};
     color: {{ site.colors.text }};
@@ -94,9 +41,7 @@ body, #markdown_content {
 }
 
 /* div sizing */
-#markdown_content{
-    width: calc(100% - 30rem);
-    z-index: 0;
+#nonheaderfooter{
     padding-bottom: 2em;
     float: right;
     flex: 1;
@@ -106,10 +51,7 @@ body, #markdown_content {
     flex-direction: column;
     min-height: 100vh;
 }
-#nonheaderfooter {
-    display: flex;
-    flex: 1;
-}
+
 
 /* footer theming */
 footer {
@@ -135,6 +77,23 @@ footer {
     color: {{ site.colors.accent }};
 }
 
+.keyblock{
+    background-color: {{site.colors.secondary}};
+    border: 4px solid {{ site.colors.accent }};
+    margin: 1rem;
+    flex-grow: 1
+}
+
+.keyblock h4{
+    padding-left: 1rem;
+    padding-right: 2rem;
+}
+
+.keyblock ul{
+    margin-left: 1rem;
+    margin-right: 2rem;
+}
+
 /* mobile-specific theming */
 @media screen and (max-width: 1499px) {
     /* header theming */
@@ -146,44 +105,21 @@ footer {
     .header_div h1{
         font-size: {{ site.mobile.header_text_size }}vw!important;
     }
-    .topmenu_content h3{
-        font-size: 26px;
-    }
-    .topmenu_content a{
-        font-size: 20px;
-    }
-    .topmenu_content ul li{
-        margin-bottom: 15px;
-    }
-    .topmenu_content li{
-        margin-left: 2em;
-    }
-    #sidebar{
-        display: none;
-        background-color: {{ site.colors.secondary }};
-    }
-    #markdown_content{
-        width: 100%;
-        z-index: 0;
-        float: right;
-    }
-    #sitemap_header{
-        text-align: center;
-        font-size: 25px;
-        font-weight: bold;
+    .keydiv{
+        display: block;
     }
     /* basic element theming */
     h2, h3, h4, h5, h6{
         padding-left: 2rem;
         padding-right: 2rem;
     }
-    #markdown_content > h1{
+    #nonheaderfooter > h1{
         padding-left: 2rem;
         padding-right: 2rem;
         font-size: 24px;
         text-decoration: underline;
     }
-    #markdown_content > h1:before{content: "> ";}
+    #nonheaderfooter > h1:before{content: "> ";}
     h2{ font-size: 20px; }
     h3{ font-size: 18px; }
     h4{ font-size: 16px; }
@@ -285,6 +221,11 @@ footer {
 
 /* desktop-specific theming */
 @media screen and (min-width: 1500px) {
+    .keydiv{
+        display: flex;
+        margin: 2rem;
+        flex-wrap: wrap;
+    }
     /* basic element theming */
     h2, h3, h4, h5, h6{
         padding-left: 5rem;
@@ -322,13 +263,13 @@ footer {
         float: right;
         display: block;
     }
-    #markdown_content > h1{
+    #nonheaderfooter > h1{
         padding-left: 2rem;
         padding-right: 2rem;
         font-size:36px;
         text-decoration: underline;
     }
-    #markdown_content > h1:before{content: "> ";}
+    #nonheaderfooter > h1:before{content: "> ";}
     h2{ font-size: 24px; }
     h3{ font-size: 22px; }
     h4{ font-size: 20px; }

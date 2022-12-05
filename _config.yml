@@ -18,12 +18,16 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "massmusicconvert: mass music conversion for the masses"
-project_name: "my cool project :)"
+title: "Joseph Melancon's PGP Keys"
+user: "Joseph Melancon"
+lang: "en"
+header_text: "joseph melancon's pgp keys"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://massmusicconvert.jmelancon.com" # the base hostname & protocol for your site, e.g. http://example.com
-footer_text: "jmelancon/massmusicconvert" # text that goes in the lower left of the screen on the footer. for example, your project's repo name.
-icon_location: "/assets/project_pic.jpg" # where your project image is. don't leave blank!
+url: "https://keys.jmelancon.com" # the base hostname & protocol for your site, e.g. http://example.com
+footer_text_left: "2022 Joseph Melancon" # text that goes in the lower left of the screen on the footer. for example, your project's repo name.
+footer_text_right: "jmelancon.com" # text that goes in the lower left of the screen on the footer. for example, your project's repo name.
+icon_location: "/assets/site_logo.png" # where your project image is. don't leave blank!
+icon_alt_text: "Site logo. It's a yellow key with a blocky red gradient behind it."
 
 # Theming
 colors:
@@ -35,10 +39,10 @@ colors:
     textbox: "#424247"
     links: Gainsboro
 mobile:
-    header_text_size: 6
+    header_text_size: 4
 
 # Build settings
-theme: monotheme-grey
+theme: jekyll-pgp-key-page
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -59,5 +63,3 @@ theme: monotheme-grey
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-plugins:
-  - jemoji

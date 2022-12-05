@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |spec|
-  spec.name          = "monotheme"
-  spec.version       = "1.0.0"
+  spec.name          = "jekyll-pgp"
+  spec.version       = "0.1.0"
   spec.authors       = ["Joseph Melancon"]
   spec.email         = ["joseph@jmelancon.com"]
 
-  spec.summary       = "A utilitarian theme designed to be customizable and responsive."
-  spec.homepage      = "https://github.com/jmelancon/monotheme"
+  spec.summary       = "Jekyll theme that automatically writes HTML for uploaded PGP public keys"
+  spec.homepage      = "https://keys.jmelancon.com"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README|_config\.yml)!i) }
