@@ -1,34 +1,43 @@
-# monotheme
+# jekyll-pgp
 
-A utilitarian theme designed to be customizable and responsive.
-
-TODO: Update to reflect project properly.
+A Jekyll project to easily share PGP keys with.
 
 ### Features:
 - Tastefully designed mobile and desktop layouts
-  - Sidebar-oriented desktop navigation with fairly liberal spacing
-  - Menu-oriented mobile navigation with more conservative spacing
 - Easily customizable in terms of coloring
 - No JavaScript usage - Allow users to fully use your site with scripts disabled
-- Auto-generated sitemap.xml
 
 ## Usage
 
-To start using this theme with your GitHub pages site, simply add the following to your _config.yml:
+To start using this, create a file named `keys.yml` in your project's `_data` folder. This is where you'll put some information about each key.
+For each key, insert the following:
+```
+- email: my@email.address
+  expiration: key/expiration/date
+  notes: Key notes.
+  id: MYKEYID
+  format: asc
+```
+
+Replace detail with the relevant information. Next, create a folder called `assets`. Place every corresponding key in this folder. Make sure it's name is it's ID, and that it's extension is the one listed on the format.
+
+Next, fill out `_config.yml` with the following:
 
 ```
-remote_theme: jmelancon/monotheme
+remote_theme: jmelancon/jekyll-pgp
 
-title: "My cool project title!" # set this to the title of your page
-project_name: "Project name" # set this to the name of your project
-lang: "en" # the language of the website in html format
+title: "Joseph Melancon's PGP Keys"
+user: "Joseph Melancon"
+lang: "en"
+header_text: "joseph melancon's pgp keys"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://myprofile.github.io/mysite" # the base hostname & protocol for your site, e.g. http://example.com
-footer_text: "mygithub/relevantrepo" # text that goes in the lower left of the screen on the footer. for example, your project's repo name.
-icon_location: "/assets/project_pic.png" # where your project image is. don't leave blank!
-icon_alt_text: "Project logo" # alt text for your project's image. you can leave this blank, but you really shouldn't.
+url: "https://keys.jmelancon.com" # the base hostname & protocol for your site, e.g. http://example.com
+footer_text_left: "2022 Joseph Melancon" # text that goes in the lower left of the screen on the footer. for example, your project's repo name.
+footer_text_right: "jmelancon.com" # text that goes in the lower left of the screen on the footer. for example, your project's repo name.
+icon_location: "/assets/site_logo.png" # where your project image is. don't leave blank!
+icon_alt_text: "Site logo. It's a yellow key with a blocky red gradient behind it."
 
-# theming
+# Theming
 colors:
     primary: "#1E1E20"
     secondary: "#252527"
@@ -38,33 +47,14 @@ colors:
     textbox: "#424247"
     links: Gainsboro
 mobile:
-    header_text_size: 6
+    header_text_size: 4
 
 exclude:
     README.md
     LICENSE
-
-plugins:
-  - jemoji # used for emojis. use them with normal GitHub markdown syntax, like this :smile:
 ```
-
-Also, be sure to add the following to the top of each markdown file in your site:
-
-```
----
-layout: page
-title: Home
-desc: Debug home page. Text here for meta description.
-permalink: /
-importance: -1
----
-```
-
-Of note is title, desc, and importance. `title` is the title of the page. This will appear in the `<title>` tag. `desc` is used for the `<meta name="description">` tag for SEO purposes. `importance` can be the same for each page, however, if you would like to sort your pages in the mobile and desktop navigation areas, using a larger importance number will make the object appear lower on the list.  
 
 To use favicons, put your ```favicon.ico``` in the root directory of your repository.
-
-Any page with a title will be included in the site's sitemap.xml.
 
 ## License
 
