@@ -9,7 +9,7 @@ A Jekyll project to easily share PGP keys with.
 
 ## Usage
 
-To start using this, create a file named `keys.yml` in your project's `_data` folder. This is where you'll put some information about each key.
+To start using this, create a file named `keys.yml` in a folder called `_data`. This is where you'll put some information about each key.
 For each key, insert the following:
 ```
 - email: my@email.address
@@ -19,21 +19,21 @@ For each key, insert the following:
   format: asc
 ```
 
-Replace detail with the relevant information. Next, create a folder called `assets`. Place every corresponding key in this folder. Make sure it's name is it's ID, and that it's extension is the one listed on the format.
+Replace detail with the relevant information. Next, create a folder called `assets` in the root of your repo. Place every corresponding key in this folder. Make sure it's name is its ID, and that its extension is the one listed on the format.
 
 Next, fill out `_config.yml` with the following:
 
 ```
 remote_theme: jmelancon/jekyll-pgp
 
-title: "Joseph Melancon's PGP Keys"
-user: "Joseph Melancon"
+title: "My PGP Keys"
+user: "Me"
 lang: "en"
-header_text: "joseph melancon's pgp keys"
+header_text: "My Cool PGP Keys"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://keys.jmelancon.com" # the base hostname & protocol for your site, e.g. http://example.com
-footer_text_left: "2022 Joseph Melancon" # text that goes in the lower left of the screen on the footer. for example, your project's repo name.
-footer_text_right: "jmelancon.com" # text that goes in the lower left of the screen on the footer. for example, your project's repo name.
+url: "https://keys.mysite.com" # the base hostname & protocol for your site, e.g. http://example.com
+footer_text_left: "2022 My Name" # text that goes in the lower left of the screen on the footer. for example, your project's repo name.
+footer_text_right: "mysite.com" # text that goes in the lower left of the screen on the footer. for example, your project's repo name.
 icon_location: "/assets/site_logo.png" # where your project image is. don't leave blank!
 icon_alt_text: "Site logo. It's a yellow key with a blocky red gradient behind it."
 
@@ -54,7 +54,11 @@ exclude:
     LICENSE
 ```
 
+Update these fields to your liking.
+
 To use favicons, put your ```favicon.ico``` in the root directory of your repository.
+
+An example of how to set this up is available on [this project's `live` branch](https://github.com/jmelancon/jekyll-pgp/tree/live).
 
 ## License
 
