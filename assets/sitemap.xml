@@ -4,12 +4,7 @@ permalink: /sitemap.xml
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    {% assign pages_by_importance = site.pages | sort: "importance" %}
-    {% for post in pages_by_importance %}
-    {% if post.title %}
     <url>
-        <loc>{{ site.url }}{{ post.url }}</loc>
+        <loc>{{ site.url }}/</loc>
     </url>
-    {% endif %}
-    {% endfor %}
 </urlset>
