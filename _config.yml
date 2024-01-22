@@ -7,20 +7,30 @@ lang: "en"
 header_text: "joseph melancon's pgp keys"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://keys.jmelancon.com" # the base hostname & protocol for your site, e.g. http://example.com
-footer_text_left: "2023 Joseph Melancon" # text that goes in the lower left of the screen on the footer. for example, your project's repo name.
+footer_text_left: "2024 Joseph Melancon" # text that goes in the lower left of the screen on the footer. for example, your project's repo name.
 footer_text_right: "jmelancon.com" # text that goes in the lower left of the screen on the footer. for example, your project's repo name.
 icon_location: "/assets/site_logo.png" # where your project image is. don't leave blank!
 icon_alt_text: "Site logo. It's a yellow key with a blocky red gradient behind it."
 
 # Theming
 colors:
+  dark:
     primary: "#1E1E20"
     secondary: "#252527"
     tertiary: "#424247"
     accent: Gainsboro
     text: Gainsboro
     textbox: "#424247"
-    links: Gainsboro
+    links: "#ebc6ff"
+  light:
+    primary: White
+    secondary: "#ddd"
+    tertiary: "#b3b3b3"
+    accent: "#999"
+    text: Black
+    textbox: "#eee"
+    links: "#5f1688"
+    
 mobile:
     header_text_size: 4
 
